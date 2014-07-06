@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "TestTableViewController.h"
 
 @interface MainViewController ()
 
@@ -27,6 +28,14 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+// ButtonをPUSH
+- (IBAction)button:(id)sender {
+    
+    // TestTableに遷移
+    TestTableViewController *testTableView = [[TestTableViewController alloc]initWithNibName:@"TestTableViewController" bundle:nil];
+    [self presentViewController:testTableView animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

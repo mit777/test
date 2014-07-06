@@ -24,6 +24,8 @@
 		CB165373196940590012840E /* testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB165372196940590012840E /* testTests.m */; };
 		CB16537F196942B80012840E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB16537D196942B80012840E /* MainViewController.m */; };
 		CB165380196942B80012840E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB16537E196942B80012840E /* MainViewController.xib */; };
+		CB165384196948F40012840E /* TestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB165382196948F40012840E /* TestTableViewController.m */; };
+		CB165385196948F40012840E /* TestTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB165383196948F40012840E /* TestTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,9 @@
 		CB16537C196942B80012840E /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		CB16537D196942B80012840E /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		CB16537E196942B80012840E /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		CB165381196948F40012840E /* TestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewController.h; sourceTree = "<group>"; };
+		CB165382196948F40012840E /* TestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewController.m; sourceTree = "<group>"; };
+		CB165383196948F40012840E /* TestTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +133,9 @@
 				CB16537C196942B80012840E /* MainViewController.h */,
 				CB16537D196942B80012840E /* MainViewController.m */,
 				CB16537E196942B80012840E /* MainViewController.xib */,
+				CB165381196948F40012840E /* TestTableViewController.h */,
+				CB165382196948F40012840E /* TestTableViewController.m */,
+				CB165383196948F40012840E /* TestTableViewController.xib */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -239,6 +247,7 @@
 				CB165354196940580012840E /* InfoPlist.strings in Resources */,
 				CB165380196942B80012840E /* MainViewController.xib in Resources */,
 				CB16535F196940580012840E /* Images.xcassets in Resources */,
+				CB165385196948F40012840E /* TestTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +268,7 @@
 			files = (
 				CB16535A196940580012840E /* AppDelegate.m in Sources */,
 				CB165356196940580012840E /* main.m in Sources */,
+				CB165384196948F40012840E /* TestTableViewController.m in Sources */,
 				CB16535D196940580012840E /* test.xcdatamodeld in Sources */,
 				CB16537F196942B80012840E /* MainViewController.m in Sources */,
 			);
