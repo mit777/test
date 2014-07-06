@@ -7,6 +7,8 @@
 //
 
 #import "TestTableViewController.h"
+#import "NameCell.h"
+#import "RegistButtonCell.h"
 
 @interface TestTableViewController ()
 
@@ -23,6 +25,12 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+    UINib *nameNib = [UINib nibWithNibName:@"NameCell" bundle:nil];
+    UINib *registNib = [UINib nibWithNibName:@"RegistButtonCell" bundle:nil];
+    [self.tableView registerNib:nameNib forCellReuseIdentifier:@"NameCell"];
+    [self.tableView registerNib:registNib forCellReuseIdentifier:@"RegistCell"];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,26 +45,43 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 5;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell...
+
+
+    if (indexPath.row == 1){
+        NameCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NameCell"];
+        return cell;
+        
+    }else if(indexPath.row == 3 ){
+        RegistButtonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RegistCell"];
+        return cell;
+    }
+    
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    }
+    cell.textLabel.text = [NSString stringWithFormat:@"%d", indexPath.row]; // 何番目のセルかを表示させました
     
     return cell;
+
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
