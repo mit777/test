@@ -22,6 +22,8 @@
 		CB165369196940590012840E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB16534D196940580012840E /* CoreData.framework */; };
 		CB165371196940590012840E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB16536F196940590012840E /* InfoPlist.strings */; };
 		CB165373196940590012840E /* testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB165372196940590012840E /* testTests.m */; };
+		CB16537F196942B80012840E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB16537D196942B80012840E /* MainViewController.m */; };
+		CB165380196942B80012840E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB16537E196942B80012840E /* MainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		CB16536E196940590012840E /* testTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testTests-Info.plist"; sourceTree = "<group>"; };
 		CB165370196940590012840E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CB165372196940590012840E /* testTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testTests.m; sourceTree = "<group>"; };
+		CB16537C196942B80012840E /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		CB16537D196942B80012840E /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		CB16537E196942B80012840E /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +125,9 @@
 				CB16535E196940580012840E /* Images.xcassets */,
 				CB16535B196940580012840E /* test.xcdatamodeld */,
 				CB165350196940580012840E /* Supporting Files */,
+				CB16537C196942B80012840E /* MainViewController.h */,
+				CB16537D196942B80012840E /* MainViewController.m */,
+				CB16537E196942B80012840E /* MainViewController.xib */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -229,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB165354196940580012840E /* InfoPlist.strings in Resources */,
+				CB165380196942B80012840E /* MainViewController.xib in Resources */,
 				CB16535F196940580012840E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,6 +260,7 @@
 				CB16535A196940580012840E /* AppDelegate.m in Sources */,
 				CB165356196940580012840E /* main.m in Sources */,
 				CB16535D196940580012840E /* test.xcdatamodeld in Sources */,
+				CB16537F196942B80012840E /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
