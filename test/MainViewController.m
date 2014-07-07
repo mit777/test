@@ -33,9 +33,13 @@
 // ButtonをPUSH
 - (IBAction)button:(id)sender {
     
-    // TestTableに遷移
+    // TestTablewを生成
     TestTableViewController *testTableView = [[TestTableViewController alloc]initWithNibName:@"TestTableViewController" bundle:nil];
-    [self presentViewController:testTableView animated:YES completion:nil];
+
+    // TestTableに遷移
+    [self.navigationController pushViewController:testTableView animated:YES];
+
+//    [self presentViewController:testTableView animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

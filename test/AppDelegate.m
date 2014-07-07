@@ -22,11 +22,22 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    // メインをrootに設定
+    // メイン画面を生成
     MainViewController *mainViewController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
-    self.window.rootViewController = mainViewController;
+
+    // ナビゲーションバーをrootに設定
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
+    self.window.rootViewController = navigationController;
     
-    
+    // 各オブジェクトの色を一括設定
+    // https://codeiq.jp/magazine/2014/05/10358/
+    [UINavigationBar appearance].backgroundColor = [UIColor redColor];
+    [[UINavigationBar appearance] setTintColor:[UIColor redColor]];
+    [[UIButton appearance] setTintColor:[UIColor redColor]];
+
+    // メモ
+    // RGBでUIColorを使用する
+    // http://qiita.com/eka2513/items/00c77622bb7b0c24e7df
     return YES;
 }
 

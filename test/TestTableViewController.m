@@ -9,6 +9,7 @@
 #import "TestTableViewController.h"
 #import "NameCell.h"
 #import "RegistButtonCell.h"
+#import "RegistTableViewController.h"
 
 @interface TestTableViewController ()
 
@@ -26,10 +27,13 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 
+    // カスタムセル
     UINib *nameNib = [UINib nibWithNibName:@"NameCell" bundle:nil];
-    UINib *registNib = [UINib nibWithNibName:@"RegistButtonCell" bundle:nil];
+//    UINib *registNib = [UINib nibWithNibName:@"RegistButtonCell" bundle:nil];
     [self.tableView registerNib:nameNib forCellReuseIdentifier:@"NameCell"];
-    [self.tableView registerNib:registNib forCellReuseIdentifier:@"RegistCell"];
+//    [self.tableView registerNib:registNib forCellReuseIdentifier:@"RegistCell"];
+    
+    //
     
 }
 
@@ -43,16 +47,18 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 5;
+    if (section == 0) {
+        return 1;
+    }else{
+        return 5;
+    }
 }
 
 
@@ -62,25 +68,34 @@
     
     // Configure the cell...
 
-
-    if (indexPath.row == 1){
-        NameCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NameCell"];
-        return cell;
+    UITableViewCell *cell;
+    NSLog(@"%d %d",indexPath.section, indexPath.row);
+    if (indexPath.section == 0) {
+        if(indexPath.row == 0 ){
+//            cell = [tableView dequeueReusableCellWithIdentifier:@"RegistCell"];
+            // 登録セル
+            cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+            if (cell == nil) {
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+            }
+            cell.textLabel.text = @"Regist";
+        }
         
-    }else if(indexPath.row == 3 ){
-        RegistButtonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RegistCell"];
-        return cell;
+    }else{
+        
+        if (indexPath.row == 1){
+            NameCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NameCell"];
+            return cell;
+        }
+        
+        cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+        }
+        cell.textLabel.text = [NSString stringWithFormat:@"%d", indexPath.row]; // 何番目のセルかを表示させました
     }
-    
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-    }
-    cell.textLabel.text = [NSString stringWithFormat:@"%d", indexPath.row]; // 何番目のセルかを表示させました
-    
     return cell;
-
+    
 }
 
 /*
@@ -121,21 +136,44 @@
 }
 */
 
-/*
+
 #pragma mark - Table view delegate
 
-// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
+// セルが選択された時
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
-    
-    // Pass the selected object to the new view controller.
-    
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    if (indexPath.section == 0 && indexPath.row == 0) {
+        // Registセルが選択された時
+        RegistTableViewController *registView = [[RegistTableViewController alloc] initWithNibName:@"RegistTableViewController" bundle:nil];
+        
+        // Push the view controller.
+        [self.navigationController pushViewController:registView animated:YES];
+    }
 }
-*/
+
+// セッションヘッダーを設定
+- (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    switch (section) {
+        case 1:
+            return @"all users";
+            
+        default:
+            break;
+    }
+    return @"";
+}
+
+-(NSString*)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
+{
+    switch (section) {
+        case 1:
+            return @"footter aaaaaaaaaaaaa\naaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            
+        default:
+            break;
+    }
+    return @"";
+}
 
 @end
