@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "TestTableViewController.h"
+#import "tmpViewController.h"
 
 @interface MainViewController ()
 
@@ -40,6 +41,14 @@
     [self.navigationController pushViewController:testTableView animated:YES];
 
 //    [self presentViewController:testTableView animated:YES completion:nil];
+}
+
+// tmpボタンをpush
+- (IBAction)tmpButton:(UIButton *)sender {
+    //tmp
+    tmpViewController *tmpView = [[tmpViewController alloc]initWithNibName:@"tmpViewController" bundle:nil];
+    [self.navigationController pushViewController:tmpView animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning

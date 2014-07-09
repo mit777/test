@@ -32,6 +32,8 @@
 		CB16538F1969AC530012840E /* RegistButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB16538D1969AC530012840E /* RegistButtonCell.xib */; };
 		CB165393196ADF8B0012840E /* RegistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB165391196ADF8B0012840E /* RegistTableViewController.m */; };
 		CB165394196ADF8B0012840E /* RegistTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB165392196ADF8B0012840E /* RegistTableViewController.xib */; };
+		CB1653BB196D79CE0012840E /* tmpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1653B9196D79CE0012840E /* tmpViewController.m */; };
+		CB1653BC196D79CE0012840E /* tmpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB1653BA196D79CE0012840E /* tmpViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,9 @@
 		CB165390196ADF8B0012840E /* RegistTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistTableViewController.h; sourceTree = "<group>"; };
 		CB165391196ADF8B0012840E /* RegistTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistTableViewController.m; sourceTree = "<group>"; };
 		CB165392196ADF8B0012840E /* RegistTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistTableViewController.xib; sourceTree = "<group>"; };
+		CB1653B8196D79CE0012840E /* tmpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tmpViewController.h; sourceTree = "<group>"; };
+		CB1653B9196D79CE0012840E /* tmpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tmpViewController.m; sourceTree = "<group>"; };
+		CB1653BA196D79CE0012840E /* tmpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = tmpViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +156,9 @@
 				CB165381196948F40012840E /* TestTableViewController.h */,
 				CB165382196948F40012840E /* TestTableViewController.m */,
 				CB165383196948F40012840E /* TestTableViewController.xib */,
+				CB1653B8196D79CE0012840E /* tmpViewController.h */,
+				CB1653B9196D79CE0012840E /* tmpViewController.m */,
+				CB1653BA196D79CE0012840E /* tmpViewController.xib */,
 				CB16538B1969AC530012840E /* RegistButtonCell.h */,
 				CB16538C1969AC530012840E /* RegistButtonCell.m */,
 				CB16538D1969AC530012840E /* RegistButtonCell.xib */,
@@ -274,6 +282,7 @@
 				CB16535F196940580012840E /* Images.xcassets in Resources */,
 				CB16538F1969AC530012840E /* RegistButtonCell.xib in Resources */,
 				CB165385196948F40012840E /* TestTableViewController.xib in Resources */,
+				CB1653BC196D79CE0012840E /* tmpViewController.xib in Resources */,
 				CB16538A196951DF0012840E /* NameCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB1653BB196D79CE0012840E /* tmpViewController.m in Sources */,
 				CB16535A196940580012840E /* AppDelegate.m in Sources */,
 				CB165356196940580012840E /* main.m in Sources */,
 				CB165384196948F40012840E /* TestTableViewController.m in Sources */,
@@ -501,6 +511,7 @@
 				CB165378196940590012840E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB165379196940590012840E /* Build configuration list for PBXNativeTarget "testTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +520,7 @@
 				CB16537B196940590012840E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
