@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <connections>
+                <outlet property="localizable" destination="lsm-ig-N5m" id="C9s-LX-38C"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -39,7 +40,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BvD-f9-Z85">
-                    <rect key="frame" x="369" y="265" width="30" height="30"/>
+                    <rect key="frame" x="362" y="265" width="43" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="tmp">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -48,15 +49,24 @@
                         <action selector="tmpButton:" destination="-1" eventType="touchUpInside" id="5cX-PN-oR1"/>
                     </connections>
                 </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Localizable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsm-ig-N5m">
+                    <rect key="frame" x="322" y="118" width="123" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="Kjy-iU-L4C" secondAttribute="centerX" id="4Pv-hE-uHN"/>
                 <constraint firstAttribute="centerX" secondItem="hne-ih-m87" secondAttribute="centerX" id="6J3-MM-mhq"/>
                 <constraint firstAttribute="centerX" secondItem="Kjy-iU-L4C" secondAttribute="centerX" id="96q-Qp-VJ0"/>
+                <constraint firstItem="lsm-ig-N5m" firstAttribute="trailing" secondItem="BvD-f9-Z85" secondAttribute="trailing" id="ASL-ZE-GMt"/>
+                <constraint firstAttribute="centerX" secondItem="lsm-ig-N5m" secondAttribute="centerX" id="AiB-xh-yQb"/>
                 <constraint firstItem="Kjy-iU-L4C" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="Mfu-0U-xz1"/>
                 <constraint firstItem="hne-ih-m87" firstAttribute="top" secondItem="Kjy-iU-L4C" secondAttribute="bottom" constant="68" id="NYH-Bw-q3p"/>
                 <constraint firstItem="hne-ih-m87" firstAttribute="centerX" secondItem="BvD-f9-Z85" secondAttribute="centerX" id="bSe-9F-bgV"/>
+                <constraint firstItem="lsm-ig-N5m" firstAttribute="top" secondItem="Kjy-iU-L4C" secondAttribute="bottom" constant="13" id="eCP-KK-Ykg"/>
                 <constraint firstItem="BvD-f9-Z85" firstAttribute="top" secondItem="hne-ih-m87" secondAttribute="bottom" constant="62" id="sxD-y2-aeK"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

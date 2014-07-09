@@ -34,6 +34,7 @@
 		CB165394196ADF8B0012840E /* RegistTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB165392196ADF8B0012840E /* RegistTableViewController.xib */; };
 		CB1653BB196D79CE0012840E /* tmpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1653B9196D79CE0012840E /* tmpViewController.m */; };
 		CB1653BC196D79CE0012840E /* tmpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB1653BA196D79CE0012840E /* tmpViewController.xib */; };
+		CB1653CB196D96610012840E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB1653CD196D96610012840E /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,10 @@
 		CB1653B8196D79CE0012840E /* tmpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tmpViewController.h; sourceTree = "<group>"; };
 		CB1653B9196D79CE0012840E /* tmpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tmpViewController.m; sourceTree = "<group>"; };
 		CB1653BA196D79CE0012840E /* tmpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = tmpViewController.xib; sourceTree = "<group>"; };
+		CB1653CC196D96610012840E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CB1653CE196D966E0012840E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CB1653CF196D966E0012840E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CB1653D0196D966F0012840E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +184,7 @@
 				CB165352196940580012840E /* InfoPlist.strings */,
 				CB165355196940580012840E /* main.m */,
 				CB165357196940580012840E /* test-Prefix.pch */,
+				CB1653CD196D96610012840E /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -259,6 +265,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ja,
 			);
 			mainGroup = CB16533B196940580012840E;
 			productRefGroup = CB165345196940580012840E /* Products */;
@@ -280,6 +287,7 @@
 				CB165354196940580012840E /* InfoPlist.strings in Resources */,
 				CB165380196942B80012840E /* MainViewController.xib in Resources */,
 				CB16535F196940580012840E /* Images.xcassets in Resources */,
+				CB1653CB196D96610012840E /* Localizable.strings in Resources */,
 				CB16538F1969AC530012840E /* RegistButtonCell.xib in Resources */,
 				CB165385196948F40012840E /* TestTableViewController.xib in Resources */,
 				CB1653BC196D79CE0012840E /* tmpViewController.xib in Resources */,
@@ -337,6 +345,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CB165353196940580012840E /* en */,
+				CB1653CE196D966E0012840E /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -345,8 +354,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				CB165370196940590012840E /* en */,
+				CB1653D0196D966F0012840E /* ja */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CB1653CD196D96610012840E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB1653CC196D96610012840E /* en */,
+				CB1653CF196D966E0012840E /* ja */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

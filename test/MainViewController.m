@@ -29,6 +29,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    // 言語により表示を変更
+    // http://konton.ninpou.jp/program/cocoa/userinterface/localize.html
+    _localizable.text = NSLocalizedString(@"test", nil);
 }
 
 // ButtonをPUSH
@@ -49,6 +53,8 @@
     tmpViewController *tmpView = [[tmpViewController alloc]initWithNibName:@"tmpViewController" bundle:nil];
     [self.navigationController pushViewController:tmpView animated:YES];
     
+    NSLog(@"Localized test = [%@]",NSLocalizedString(@"test", nil));
+
 }
 
 - (void)didReceiveMemoryWarning
