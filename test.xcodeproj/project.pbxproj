@@ -35,6 +35,8 @@
 		CB1653BB196D79CE0012840E /* tmpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1653B9196D79CE0012840E /* tmpViewController.m */; };
 		CB1653BC196D79CE0012840E /* tmpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB1653BA196D79CE0012840E /* tmpViewController.xib */; };
 		CB1653CB196D96610012840E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB1653CD196D96610012840E /* Localizable.strings */; };
+		CB314AE4197BA9C900CD7D07 /* RegistButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB314AE2197BA9C900CD7D07 /* RegistButtonCell.m */; };
+		CB314AE5197BA9C900CD7D07 /* RegistButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB314AE3197BA9C900CD7D07 /* RegistButtonCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,9 @@
 		CB1653CE196D966E0012840E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CB1653CF196D966E0012840E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CB1653D0196D966F0012840E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CB314AE1197BA9C900CD7D07 /* RegistButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegistButtonCell.h; path = cell/RegistButtonCell.h; sourceTree = "<group>"; };
+		CB314AE2197BA9C900CD7D07 /* RegistButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegistButtonCell.m; path = cell/RegistButtonCell.m; sourceTree = "<group>"; };
+		CB314AE3197BA9C900CD7D07 /* RegistButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RegistButtonCell.xib; path = cell/RegistButtonCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +155,7 @@
 		CB16534F196940580012840E /* test */ = {
 			isa = PBXGroup;
 			children = (
+				CB314AE0197BA93800CD7D07 /* cell */,
 				CB165358196940580012840E /* AppDelegate.h */,
 				CB165359196940580012840E /* AppDelegate.m */,
 				CB16535E196940580012840E /* Images.xcassets */,
@@ -164,9 +170,6 @@
 				CB1653B8196D79CE0012840E /* tmpViewController.h */,
 				CB1653B9196D79CE0012840E /* tmpViewController.m */,
 				CB1653BA196D79CE0012840E /* tmpViewController.xib */,
-				CB16538B1969AC530012840E /* RegistButtonCell.h */,
-				CB16538C1969AC530012840E /* RegistButtonCell.m */,
-				CB16538D1969AC530012840E /* RegistButtonCell.xib */,
 				CB165386196951DF0012840E /* NameCell.h */,
 				CB165387196951DF0012840E /* NameCell.m */,
 				CB165388196951DF0012840E /* NameCell.xib */,
@@ -205,6 +208,19 @@
 				CB16536F196940590012840E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB314AE0197BA93800CD7D07 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				CB314AE1197BA9C900CD7D07 /* RegistButtonCell.h */,
+				CB314AE2197BA9C900CD7D07 /* RegistButtonCell.m */,
+				CB314AE3197BA9C900CD7D07 /* RegistButtonCell.xib */,
+				CB16538B1969AC530012840E /* RegistButtonCell.h */,
+				CB16538C1969AC530012840E /* RegistButtonCell.m */,
+				CB16538D1969AC530012840E /* RegistButtonCell.xib */,
+			);
+			name = cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB165394196ADF8B0012840E /* RegistTableViewController.xib in Resources */,
+				CB314AE5197BA9C900CD7D07 /* RegistButtonCell.xib in Resources */,
 				CB165354196940580012840E /* InfoPlist.strings in Resources */,
 				CB165380196942B80012840E /* MainViewController.xib in Resources */,
 				CB16535F196940580012840E /* Images.xcassets in Resources */,
@@ -319,6 +336,7 @@
 				CB165389196951DF0012840E /* NameCell.m in Sources */,
 				CB16538E1969AC530012840E /* RegistButtonCell.m in Sources */,
 				CB16537F196942B80012840E /* MainViewController.m in Sources */,
+				CB314AE4197BA9C900CD7D07 /* RegistButtonCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
