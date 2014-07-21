@@ -45,6 +45,8 @@
 		CB314AFC197BBB9E00CD7D07 /* KeyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB314AFA197BBB9E00CD7D07 /* KeyCell.xib */; };
 		CB314B00197BBBBC00CD7D07 /* IntervalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB314AFE197BBBBC00CD7D07 /* IntervalCell.m */; };
 		CB314B01197BBBBC00CD7D07 /* IntervalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB314AFF197BBBBC00CD7D07 /* IntervalCell.xib */; };
+		CB314B04197D125400CD7D07 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = CB314B03197D125400CD7D07 /* Account.m */; };
+		CB314B0D197D12FC00CD7D07 /* AccountValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = CB314B0C197D12FC00CD7D07 /* AccountValidator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,10 @@
 		CB314AFD197BBBBC00CD7D07 /* IntervalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntervalCell.h; sourceTree = "<group>"; };
 		CB314AFE197BBBBC00CD7D07 /* IntervalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntervalCell.m; sourceTree = "<group>"; };
 		CB314AFF197BBBBC00CD7D07 /* IntervalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntervalCell.xib; sourceTree = "<group>"; };
+		CB314B02197D125400CD7D07 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		CB314B03197D125400CD7D07 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		CB314B0B197D12FC00CD7D07 /* AccountValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountValidator.h; sourceTree = "<group>"; };
+		CB314B0C197D12FC00CD7D07 /* AccountValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountValidator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +199,10 @@
 				CB165390196ADF8B0012840E /* RegistTableViewController.h */,
 				CB165391196ADF8B0012840E /* RegistTableViewController.m */,
 				CB165392196ADF8B0012840E /* RegistTableViewController.xib */,
+				CB314B02197D125400CD7D07 /* Account.h */,
+				CB314B03197D125400CD7D07 /* Account.m */,
+				CB314B0B197D12FC00CD7D07 /* AccountValidator.h */,
+				CB314B0C197D12FC00CD7D07 /* AccountValidator.m */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -363,9 +373,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB314B0D197D12FC00CD7D07 /* AccountValidator.m in Sources */,
 				CB1653BB196D79CE0012840E /* tmpViewController.m in Sources */,
 				CB16535A196940580012840E /* AppDelegate.m in Sources */,
 				CB314AFB197BBB9E00CD7D07 /* KeyCell.m in Sources */,
+				CB314B04197D125400CD7D07 /* Account.m in Sources */,
 				CB314AF1197BBB5100CD7D07 /* PasswordCell.m in Sources */,
 				CB165356196940580012840E /* main.m in Sources */,
 				CB165384196948F40012840E /* TestTableViewController.m in Sources */,
