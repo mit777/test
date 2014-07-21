@@ -10,11 +10,10 @@
 
 @interface NameCell : UITableViewCell
 
-@property NSString *NameText;
 // ラベル
-@property (weak, nonatomic) IBOutlet UILabel *Name;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
 // テキストフィールド
-- (IBAction)NameText:(UITextField *)sender;
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 
 @end

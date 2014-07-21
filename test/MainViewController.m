@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "TestTableViewController.h"
 #import "tmpViewController.h"
+#import "RegistTableViewController.h"
 
 @interface MainViewController ()
 
@@ -35,16 +36,19 @@
     _localizable.text = NSLocalizedString(@"test", nil);
 }
 
-// ButtonをPUSH
+// registButtonをPUSH
 - (IBAction)button:(id)sender {
     
-    // TestTablewを生成
-    TestTableViewController *testTableView = [[TestTableViewController alloc]initWithNibName:@"TestTableViewController" bundle:nil];
+//    // TestTablewを生成
+//    TestTableViewController *testTableView = [[TestTableViewController alloc]initWithNibName:@"TestTableViewController" bundle:nil];
+//
+//    // TestTableに遷移
+//    [self.navigationController pushViewController:testTableView animated:YES];
 
-    // TestTableに遷移
-    [self.navigationController pushViewController:testTableView animated:YES];
+    
+    RegistTableViewController *registView = [[RegistTableViewController alloc]initWithNibName:@"RegistTableViewController" bundle:nil];
+    [self.navigationController pushViewController:registView animated:YES];
 
-//    [self presentViewController:testTableView animated:YES completion:nil];
 }
 
 // tmpボタンをpush

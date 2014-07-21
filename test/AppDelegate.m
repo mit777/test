@@ -31,8 +31,8 @@
     
     // 各オブジェクトの色を一括設定
     // https://codeiq.jp/magazine/2014/05/10358/
-    [UINavigationBar appearance].backgroundColor = [UIColor redColor];
-    [[UINavigationBar appearance] setTintColor:[UIColor redColor]];
+    [UINavigationBar appearance].backgroundColor = [UIColor blueColor];
+    [[UINavigationBar appearance] setTintColor:[UIColor blueColor]];
     [[UIButton appearance] setTintColor:[UIColor redColor]];
 
     // メモ

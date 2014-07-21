@@ -1,14 +1,14 @@
 //
-//  NameTableViewCell.m
+//  UserIdCell.m
 //  test
 //
-//  Created by buti on 2014/07/06.
+//  Created by buti on 2014/07/20.
 //  Copyright (c) 2014年 mycompany. All rights reserved.
 //
 
-#import "NameCell.h"
+#import "UserIdCell.h"
 
-@implementation NameCell
+@implementation UserIdCell
 
 - (void)awakeFromNib
 {

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="UrlCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfd-Vg-MMF">
+                        <rect key="frame" x="20" y="11" width="280" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qMk-ji-PKi">
+                        <rect key="frame" x="20" y="49" width="280" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="qMk-ji-PKi" secondAttribute="trailing" constant="20" id="1bo-gO-M1M"/>
+                    <constraint firstAttribute="bottom" secondItem="qMk-ji-PKi" secondAttribute="bottom" constant="8" id="BWE-ea-iun"/>
+                    <constraint firstItem="Rfd-Vg-MMF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="NCH-Qg-coe"/>
+                    <constraint firstItem="qMk-ji-PKi" firstAttribute="height" secondItem="Rfd-Vg-MMF" secondAttribute="height" id="bOE-ha-lbl"/>
+                    <constraint firstItem="qMk-ji-PKi" firstAttribute="top" secondItem="Rfd-Vg-MMF" secondAttribute="bottom" constant="8" id="gLr-kL-JCD"/>
+                    <constraint firstItem="qMk-ji-PKi" firstAttribute="width" secondItem="Rfd-Vg-MMF" secondAttribute="width" id="gY1-HG-BDx"/>
+                    <constraint firstItem="qMk-ji-PKi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="k7T-JU-ZbP"/>
+                    <constraint firstAttribute="trailing" secondItem="Rfd-Vg-MMF" secondAttribute="trailing" constant="20" id="pqO-qD-WSh"/>
+                    <constraint firstItem="qMk-ji-PKi" firstAttribute="top" secondItem="Rfd-Vg-MMF" secondAttribute="bottom" constant="8" id="vz2-CZ-2GQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="urlLabel" destination="Rfd-Vg-MMF" id="IzU-kk-pa3"/>
+                <outlet property="urlTextField" destination="qMk-ji-PKi" id="I4T-Y0-Kmg"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
