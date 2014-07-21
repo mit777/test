@@ -16,7 +16,8 @@
 #import "KeyCell.h"
 #import "IntervalCell.h"
 #import "Account.h"
-
+#import "AccountValidator.h"
+#import "DialogManager.h"
 
 // セル識別
 typedef NS_ENUM(NSInteger, CELL_TAG){
@@ -198,18 +199,21 @@ typedef NS_ENUM(NSInteger, INTERVAL_CNT){
 {
     // ハイライトの解除
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    NSString *msg = [NSString stringWithFormat:
-                     @"name:[%@]\nuserID:[%@]\npassword:[%@]\nurl:[%@]\nkey:[%@]\ninterval:[%d]",
-                     _account.name,_account.userId,_account.password,_account.url,_account.key,_account.intarval];
-    
+
     if (indexPath.section == 1) {
-        UIAlertView *alert = [[UIAlertView alloc]
-                              initWithTitle:@"result"
-                              message:msg
-                              delegate:nil
-                              cancelButtonTitle:@"OK"
-                              otherButtonTitles:nil];
+        
+        NSInteger result = [AccountValidator isAccountValid:_account];
+        UIAlertView *alert = [DialogManager errorAlertDialog:result];
+        
+//        NSString *msg = [NSString stringWithFormat:
+//                         @"name:[%@]\nuserID:[%@]\npassword:[%@]\nurl:[%@]\nkey:[%@]\ninterval:[%d]",
+//                         _account.name,_account.userId,_account.password,_account.url,_account.key,_account.intarval];
+//        UIAlertView *alert = [[UIAlertView alloc]
+//                              initWithTitle:@"result"
+//                              message:msg
+//                              delegate:nil
+//                              cancelButtonTitle:@"OK"
+//                              otherButtonTitles:nil];
         [alert show];
         [self.navigationController popViewControllerAnimated:YES];
     }

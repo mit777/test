@@ -7,7 +7,17 @@
 //
 
 #import "AccountValidator.h"
+#import "Const.h"
 
 @implementation AccountValidator
+
+// アカウントのバリデーションチェック
++(NSInteger)isAccountValid:(Account *)account
+{
+    if ([account.key isEqualToString:@""]) {
+        return invalidKey;
+    }
+    return ok;
+}
 
 @end

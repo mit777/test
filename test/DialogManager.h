@@ -1,5 +1,5 @@
 //
-//  AccountValidator.h
+//  DialogManager.h
 //  test
 //
 //  Created by buti on 2014/07/21.
@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Account.h"
+#import <UIKit/UIKit.h>
+#import "Const.h"
 
-@interface AccountValidator : NSObject
+@interface DialogManager : NSObject
 
 
-+(NSInteger)isAccountValid:(Account *)account;
++(UIAlertView *)errorAlertDialog:(NSInteger)errorCode;
+
 
 @end

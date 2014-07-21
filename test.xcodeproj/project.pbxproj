@@ -47,6 +47,7 @@
 		CB314B01197BBBBC00CD7D07 /* IntervalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB314AFF197BBBBC00CD7D07 /* IntervalCell.xib */; };
 		CB314B04197D125400CD7D07 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = CB314B03197D125400CD7D07 /* Account.m */; };
 		CB314B0D197D12FC00CD7D07 /* AccountValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = CB314B0C197D12FC00CD7D07 /* AccountValidator.m */; };
+		CB314B10197D51CC00CD7D07 /* DialogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB314B0F197D51CC00CD7D07 /* DialogManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,9 @@
 		CB314B03197D125400CD7D07 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
 		CB314B0B197D12FC00CD7D07 /* AccountValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountValidator.h; sourceTree = "<group>"; };
 		CB314B0C197D12FC00CD7D07 /* AccountValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountValidator.m; sourceTree = "<group>"; };
+		CB314B0E197D51CC00CD7D07 /* DialogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialogManager.h; sourceTree = "<group>"; };
+		CB314B0F197D51CC00CD7D07 /* DialogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialogManager.m; sourceTree = "<group>"; };
+		CB314B11197D536B00CD7D07 /* Const.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,11 +202,14 @@
 				CB1653BA196D79CE0012840E /* tmpViewController.xib */,
 				CB165390196ADF8B0012840E /* RegistTableViewController.h */,
 				CB165391196ADF8B0012840E /* RegistTableViewController.m */,
+				CB314B0E197D51CC00CD7D07 /* DialogManager.h */,
+				CB314B0F197D51CC00CD7D07 /* DialogManager.m */,
 				CB165392196ADF8B0012840E /* RegistTableViewController.xib */,
 				CB314B02197D125400CD7D07 /* Account.h */,
 				CB314B03197D125400CD7D07 /* Account.m */,
 				CB314B0B197D12FC00CD7D07 /* AccountValidator.h */,
 				CB314B0C197D12FC00CD7D07 /* AccountValidator.m */,
+				CB314B11197D536B00CD7D07 /* Const.h */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -378,6 +385,7 @@
 				CB16535A196940580012840E /* AppDelegate.m in Sources */,
 				CB314AFB197BBB9E00CD7D07 /* KeyCell.m in Sources */,
 				CB314B04197D125400CD7D07 /* Account.m in Sources */,
+				CB314B10197D51CC00CD7D07 /* DialogManager.m in Sources */,
 				CB314AF1197BBB5100CD7D07 /* PasswordCell.m in Sources */,
 				CB165356196940580012840E /* main.m in Sources */,
 				CB165384196948F40012840E /* TestTableViewController.m in Sources */,
