@@ -111,17 +111,17 @@ typedef NS_ENUM(NSInteger, INTERVAL_CNT){
         if (indexPath.row == CELL_NAME) {
             // name
             NameCell *nameCell = [tableView dequeueReusableCellWithIdentifier:@"NameCell" forIndexPath:indexPath];
-            nameCell.nameTextField.text = _account.name;
-            nameCell.nameTextField.placeholder = @"input name";
-            nameCell.nameTextField.delegate = self;
-            nameCell.nameTextField.tag = CELL_NAME;
+//            nameCell.nameTextField.text = _account.name;
+//            nameCell.nameTextField.placeholder = @"input name";
+//            nameCell.nameTextField.delegate = self;
+//            nameCell.nameTextField.tag = CELL_NAME;
             cell = (UITableViewCell*)nameCell;
-            
+                    NSLog(@"name:%@",nameCell);
         }else if (indexPath.row == CELL_USERID){
             // userid
             UserIdCell *userIdCell = [tableView dequeueReusableCellWithIdentifier:@"UserIdCell" forIndexPath:indexPath];
             userIdCell.userIdTextField.delegate = self;
-            userIdCell.userIdTextField.tag = CELL_USERID;
+//            userIdCell.userIdTextField.tag = CELL_USERID;
             cell = (UITableViewCell*)userIdCell;
 
             
@@ -189,7 +189,6 @@ typedef NS_ENUM(NSInteger, INTERVAL_CNT){
         cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
         cell.textLabel.text = @"Regist";
         cell.textLabel.textColor = [UIColor blueColor];
-
     }
     return cell;
 }
@@ -201,6 +200,15 @@ typedef NS_ENUM(NSInteger, INTERVAL_CNT){
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
     if (indexPath.section == 1) {
+
+        // 注意：dataSourceから取得しないと表示されていないセルの値が取得できない
+        NameCell *nameCell = (NameCell*)[tableView.dataSource tableView:tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+        NSLog(@"name:%@",nameCell.nameTextField.text);
+        
+        
+        UserIdCell *userIdCell = [tableView dequeueReusableCellWithIdentifier:@"UserIdCell" forIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
+        NSLog(@"userid:%@",userIdCell.userIdTextField.text);
+
         
         NSInteger result = [AccountValidator isAccountValid:_account];
         UIAlertView *alert = [DialogManager errorAlertDialog:result];
@@ -263,83 +271,29 @@ typedef NS_ENUM(NSInteger, INTERVAL_CNT){
      return YES;
 }
 
-// テキストフィールドの編集が終了する直後に呼び出される
--(void)textFieldDidEndEditing:(UITextField *)textField
-{
-    NSLog(@"textFieldDidEndEditing:%@",textField.text);
-    // インスタンス変数に値をセット
-    switch (textField.tag) {
-        case CELL_NAME:
-            _account.name = textField.text;
-            break;
-        case CELL_USERID:
-            _account.userId = textField.text;
-            break;
-        case CELL_PASSWORD:
-            _account.password = textField.text;
-            break;
-        case CELL_URL:
-            _account.url = textField.text;
-            break;
-        case CELL_KEY:
-            _account.key = textField.text;
-            break;
-        default:
-            break;
-    }
-}
-#define MAX_LENGTH 8
-/**
- * テキストフィールドが編集された時に呼び出される
- * @param textField イベントが発生したテキストフィールド
- * @param range 文字列が置き換わる範囲(入力された範囲)
- * @param string 置き換わる文字列(入力された文字列)
- * @retval YES 入力を許可する場合
- * @retval NO 許可しない場合
- */
--(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
-{
-    NSLog(@"range.location:%d range.length:%d string:%@",range.location, range.length, string);
-    
-// TODO: 区切る処理
-    // 入力後のテキスト
-    NSString *result = [textField.text stringByReplacingCharactersInRange:range withString:string];
-    NSLog(@"result:%@",result);
-    
-//    if (textField.tag == CELL_KEY) {
-//        <#statements#>
+//// テキストフィールドの編集が終了する直後に呼び出される
+//-(void)textFieldDidEndEditing:(UITextField *)textField
+//{
+//    NSLog(@"textFieldDidEndEditing:%@",textField.text);
+//    // インスタンス変数に値をセット
+//    switch (textField.tag) {
+//        case CELL_NAME:
+//            _account.name = textField.text;
+//            break;
+//        case CELL_USERID:
+//            _account.userId = textField.text;
+//            break;
+//        case CELL_PASSWORD:
+//            _account.password = textField.text;
+//            break;
+//        case CELL_URL:
+//            _account.url = textField.text;
+//            break;
+//        case CELL_KEY:
+//            _account.key = textField.text;
+//            break;
+//        default:
+//            break;
 //    }
-    
-//    if(textField.text.length == 0 || [string isEqualToString:@""]){
-    if(textField.text.length == 0 ){
-        // 入力前の値が0文字 または　バックスペースが入力されたの合は何もしない
-        return YES;
-    }
-
-    // abcdefghi
-    if([string isEqualToString:@""]){
-        // バックスペースの場合は何もしない
-        return YES;
-    }
-
-    // すでに入力されているテキストを取得
-    NSMutableString *text = [textField.text mutableCopy];
-
-    int kugiri = text.length % 4;
-    if (kugiri == 0) {
-        [text appendString:@"-"];
-    }
-    textField.text = text;
-
-    return YES;
-//    // すでに入力されているテキストを取得
-//    NSMutableString *text = [textField.text mutableCopy];
-//    
-//    // すでに入力されているテキストに今回編集されたテキストをマージ
-//    [text replaceCharactersInRange:range withString:string];
-//    
-//    NSLog(@"length:%d %d",textField.text.length, [text length]);
-//    // 結果が文字数をオーバーしていないならYES，オーバーしている場合はNO
-//    return ([text length] <= MAX_LENGTH);
-}
+//}
 @end
