@@ -40,6 +40,8 @@ typedef NS_ENUM(NSInteger, INTERVAL_CNT){
 // インスタンス変数
 @property Account *account;
 
+@property NameCell *pNameCell;
+
 @end
 
 @implementation RegistTableViewController
@@ -67,6 +69,9 @@ typedef NS_ENUM(NSInteger, INTERVAL_CNT){
     [self.tableView registerNib:[UINib nibWithNibName:@"IntervalCell" bundle:nil] forCellReuseIdentifier:@"IntervalCell"];
     // 通常のセル
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+
+    UINib *nib = [UINib nibWithNibName:@"NameCell" bundle:nil];
+    _pNameCell = [[nib instantiateWithOwner:nil options:nil] objectAtIndex:0];
 
 
 }
@@ -105,18 +110,22 @@ typedef NS_ENUM(NSInteger, INTERVAL_CNT){
 // セルを設定
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"section:%d row:%d",indexPath.section, indexPath.row);
     UITableViewCell *cell;
     if (indexPath.section == 0) {
         // 入力項目
         if (indexPath.row == CELL_NAME) {
             // name
-            NameCell *nameCell = [tableView dequeueReusableCellWithIdentifier:@"NameCell" forIndexPath:indexPath];
+//            NameCell *nameCell = [tableView dequeueReusableCellWithIdentifier:@"NameCell" forIndexPath:indexPath];
 //            nameCell.nameTextField.text = _account.name;
 //            nameCell.nameTextField.placeholder = @"input name";
 //            nameCell.nameTextField.delegate = self;
 //            nameCell.nameTextField.tag = CELL_NAME;
-            cell = (UITableViewCell*)nameCell;
-                    NSLog(@"name:%@",nameCell);
+//            cell = (UITableViewCell*)nameCell;
+//                    NSLog(@"name:%@",nameCell);
+            
+            cell = _pNameCell;
+            NSLog(@"cell:%@",cell);
         }else if (indexPath.row == CELL_USERID){
             // userid
             UserIdCell *userIdCell = [tableView dequeueReusableCellWithIdentifier:@"UserIdCell" forIndexPath:indexPath];
@@ -202,13 +211,20 @@ typedef NS_ENUM(NSInteger, INTERVAL_CNT){
     if (indexPath.section == 1) {
 
         // 注意：dataSourceから取得しないと表示されていないセルの値が取得できない
-        NameCell *nameCell = (NameCell*)[tableView.dataSource tableView:tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+//        NameCell *nameCell = (NameCell*)[tableView.dataSource tableView:tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+        NameCell *nameCell = (NameCell*)[tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+
+        NSLog(@"did cell:%@",nameCell);
+
         NSLog(@"name:%@",nameCell.nameTextField.text);
+        NSLog(@"name:%@",_pNameCell.nameTextField.text);
         
         
         UserIdCell *userIdCell = [tableView dequeueReusableCellWithIdentifier:@"UserIdCell" forIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
         NSLog(@"userid:%@",userIdCell.userIdTextField.text);
 
+        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+        NSLog(@"nomal cell:%@",cell.textLabel.text);
         
         NSInteger result = [AccountValidator isAccountValid:_account];
         UIAlertView *alert = [DialogManager errorAlertDialog:result];
@@ -262,14 +278,6 @@ typedef NS_ENUM(NSInteger, INTERVAL_CNT){
 
 // UITextFieldのdelegate
 
-// Returnボタンがタップされた時に呼ばれる
--(BOOL)textFieldShouldReturn:(UITextField*)textField
-{
-    NSLog(@"textFieldShouldReturn:%@",textField.text);
-    // キーボードを閉じる
-    [textField resignFirstResponder];
-     return YES;
-}
 
 //// テキストフィールドの編集が終了する直後に呼び出される
 //-(void)textFieldDidEndEditing:(UITextField *)textField
