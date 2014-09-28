@@ -7,7 +7,7 @@
 //
 // TODO: http
 
-
+#import <QuartzCore/QuartzCore.h>
 #import "RegistTableViewController.h"
 #import "NameCell.h"
 #import "UserIdCell.h"
@@ -18,6 +18,7 @@
 #import "Account.h"
 #import "AccountValidator.h"
 #import "DialogManager.h"
+#import "ButtonCell.h"
 
 // セル識別
 typedef NS_ENUM(NSInteger, CELL_TAG){
@@ -41,7 +42,7 @@ typedef NS_ENUM(NSInteger, INTERVAL_CNT){
 @property Account *account;
 
 @property NameCell *pNameCell;
-
+@property UserIdCell *pUserIdCell;
 @end
 
 @implementation RegistTableViewController
@@ -58,6 +59,7 @@ typedef NS_ENUM(NSInteger, INTERVAL_CNT){
 
     self.navigationItem.title = @"Regist";
     
+    //　以下はダメ、消えてしまう
     // iOS 6.0以降からのセル再利用の設定（xibの場合）
     // http://blog.morizotter.com/2013/01/23/the-easiest-way-to-make-custamcell-with-xib/
     // カスタムセル
@@ -67,11 +69,14 @@ typedef NS_ENUM(NSInteger, INTERVAL_CNT){
     [self.tableView registerNib:[UINib nibWithNibName:@"UrlCell" bundle:nil] forCellReuseIdentifier:@"UrlCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"KeyCell" bundle:nil] forCellReuseIdentifier:@"KeyCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"IntervalCell" bundle:nil] forCellReuseIdentifier:@"IntervalCell"];
-    // 通常のセル
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+    // ボタンのセル
+    [self.tableView registerClass:[ButtonCell class] forCellReuseIdentifier:@"Cell"];
 
     UINib *nib = [UINib nibWithNibName:@"NameCell" bundle:nil];
     _pNameCell = [[nib instantiateWithOwner:nil options:nil] objectAtIndex:0];
+
+    nib = [UINib nibWithNibName:@"UserIdCell" bundle:nil];
+    _pUserIdCell = [[nib instantiateWithOwner:nil options:nil] objectAtIndex:0];
 
 
 }
@@ -116,14 +121,6 @@ typedef NS_ENUM(NSInteger, INTERVAL_CNT){
         // 入力項目
         if (indexPath.row == CELL_NAME) {
             // name
-//            NameCell *nameCell = [tableView dequeueReusableCellWithIdentifier:@"NameCell" forIndexPath:indexPath];
-//            nameCell.nameTextField.text = _account.name;
-//            nameCell.nameTextField.placeholder = @"input name";
-//            nameCell.nameTextField.delegate = self;
-//            nameCell.nameTextField.tag = CELL_NAME;
-//            cell = (UITableViewCell*)nameCell;
-//                    NSLog(@"name:%@",nameCell);
-            
             cell = _pNameCell;
             NSLog(@"cell:%@",cell);
         }else if (indexPath.row == CELL_USERID){
@@ -132,7 +129,6 @@ typedef NS_ENUM(NSInteger, INTERVAL_CNT){
             userIdCell.userIdTextField.delegate = self;
 //            userIdCell.userIdTextField.tag = CELL_USERID;
             cell = (UITableViewCell*)userIdCell;
-
             
         }else if (indexPath.row == CELL_PASSWORD){
             // password
@@ -196,8 +192,19 @@ typedef NS_ENUM(NSInteger, INTERVAL_CNT){
     }else{
         // ボタン
         cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-        cell.textLabel.text = @"Regist";
-        cell.textLabel.textColor = [UIColor blueColor];
+        cell.textLabel.text = @"Regist aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+        
+//        cell.textLabel.textColor = [UIColor whiteColor];
+//        cell.backgroundColor = [UIColor blueColor];
+//        
+//        //枠線
+//        cell.layer.borderWidth = 0.5f;
+//        //枠線の色
+//        cell.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+//        //角丸
+//        cell.layer.cornerRadius = 10.0f;
+//        //サブビューにも適応
+//        cell.clipsToBounds = YES;
     }
     return cell;
 }
@@ -239,7 +246,7 @@ typedef NS_ENUM(NSInteger, INTERVAL_CNT){
 //                              cancelButtonTitle:@"OK"
 //                              otherButtonTitles:nil];
         [alert show];
-        [self.navigationController popViewControllerAnimated:YES];
+//        [self.navigationController popViewControllerAnimated:YES];
     }
 }
 

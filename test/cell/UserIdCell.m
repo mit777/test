@@ -13,6 +13,8 @@
 - (void)awakeFromNib
 {
     // Initialization code
+    NSLog(@"UserIdCell awakeFromNib");
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

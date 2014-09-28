@@ -48,6 +48,8 @@
 		CB314B04197D125400CD7D07 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = CB314B03197D125400CD7D07 /* Account.m */; };
 		CB314B0D197D12FC00CD7D07 /* AccountValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = CB314B0C197D12FC00CD7D07 /* AccountValidator.m */; };
 		CB314B10197D51CC00CD7D07 /* DialogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB314B0F197D51CC00CD7D07 /* DialogManager.m */; };
+		CB8E402919D834FC00D59D88 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8E402819D834FC00D59D88 /* ButtonCell.m */; };
+		CB8E402B19D837A000D59D88 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8E402A19D837A000D59D88 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +125,9 @@
 		CB314B0E197D51CC00CD7D07 /* DialogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialogManager.h; sourceTree = "<group>"; };
 		CB314B0F197D51CC00CD7D07 /* DialogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialogManager.m; sourceTree = "<group>"; };
 		CB314B11197D536B00CD7D07 /* Const.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
+		CB8E402719D834FC00D59D88 /* ButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ButtonCell.h; path = cell/ButtonCell.h; sourceTree = "<group>"; };
+		CB8E402819D834FC00D59D88 /* ButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ButtonCell.m; path = cell/ButtonCell.m; sourceTree = "<group>"; };
+		CB8E402A19D837A000D59D88 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB8E402B19D837A000D59D88 /* QuartzCore.framework in Frameworks */,
 				CB16534A196940580012840E /* CoreGraphics.framework in Frameworks */,
 				CB16534E196940580012840E /* CoreData.framework in Frameworks */,
 				CB16534C196940580012840E /* UIKit.framework in Frameworks */,
@@ -173,6 +179,7 @@
 		CB165346196940580012840E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB8E402A19D837A000D59D88 /* QuartzCore.framework */,
 				CB165347196940580012840E /* Foundation.framework */,
 				CB165349196940580012840E /* CoreGraphics.framework */,
 				CB16534B196940580012840E /* UIKit.framework */,
@@ -268,6 +275,8 @@
 				CB314AFD197BBBBC00CD7D07 /* IntervalCell.h */,
 				CB314AFE197BBBBC00CD7D07 /* IntervalCell.m */,
 				CB314AFF197BBBBC00CD7D07 /* IntervalCell.xib */,
+				CB8E402719D834FC00D59D88 /* ButtonCell.h */,
+				CB8E402819D834FC00D59D88 /* ButtonCell.m */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -381,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB314B0D197D12FC00CD7D07 /* AccountValidator.m in Sources */,
+				CB8E402919D834FC00D59D88 /* ButtonCell.m in Sources */,
 				CB1653BB196D79CE0012840E /* tmpViewController.m in Sources */,
 				CB16535A196940580012840E /* AppDelegate.m in Sources */,
 				CB314AFB197BBB9E00CD7D07 /* KeyCell.m in Sources */,

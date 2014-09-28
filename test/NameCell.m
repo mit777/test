@@ -44,6 +44,13 @@
     return self;
 }
 
+-(void)willMoveToSuperview:(UIView *)newSuperview
+{
+    [super willMoveToSuperview:newSuperview];
+
+    NSLog(@"willMoveToSuperview");
+}
+
 // UITextField delegate
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
